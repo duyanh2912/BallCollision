@@ -106,11 +106,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
     }
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-//        CATransaction.begin()
-//        CATransaction.setAnimationDuration(0)
-//        circle.position = nextCenter.add(x: -radius, y: -radius)
-//        CATransaction.commit()
-        
         let param = animate(startingPoint: nextCenter, angle: nextAngle)
         nextCenter = param.0
         nextAngle = param.1
