@@ -5,6 +5,7 @@
 //  Created by Duy Anh on 2/12/17.
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
+//  Đề nghị anh em không xem code =))
 
 import UIKit
 
@@ -92,11 +93,10 @@ class ViewController: UIViewController, CAAnimationDelegate {
         
         // Animation
         circle.position = endingPoint.add(x: -radius, y: -radius)
-        
+
         let anim = CABasicAnimation()
         anim.keyPath = "position"
         anim.fromValue = NSValue.init(cgPoint: startingPoint.add(x: -radius, y: -radius))
-//        anim.toValue = NSValue.init(cgPoint: endingPoint.add(x: -radius, y: -radius))
         anim.duration = Double(endingPoint.subtract(startingPoint).length / speed)
         anim.delegate = self
         anim.fillMode = kCAFillModeForwards
